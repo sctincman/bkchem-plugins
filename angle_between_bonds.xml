@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin>
+
+  <meta>
+    <author>Beda Kosata</author>
+  </meta>
+
+  <source>
+    <file>angle_between_bonds.py</file>
+    <menu-text>Angle between bonds</menu-text>
+  </source>
+</plugin>
