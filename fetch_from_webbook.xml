@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin>
+
+  <meta>
+    <author>Beda Kosata</author>
+  </meta>
+
+  <source>
+    <file>fetch_from_webbook.py</file>
+    <menu-text>Fetch from Webbook</menu-text>
+  </source>
+</plugin>
