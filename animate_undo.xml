@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin>
+
+  <meta>
+    <author email="beda@zirael.org">Beda Kosata</author>
+    <description>
+    </description>
+  </meta>
+
+  <source>
+    <file>animate_undo.py</file>
+    <menu-text lang="en">Undo animation</menu-text>
+  </source>
+</plugin>

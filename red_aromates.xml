@@ -3,11 +3,15 @@
 <plugin>
 
   <meta>
-    <author>Beda Kosata</author>
+    <author email="beda@zirael.org">Beda Kosata</author>
+    <description>
+      Finds all aromatic bonds in the current drawing (paper) and marks them
+      by setting their color to red.
+    </description>
   </meta>
 
   <source>
     <file>red_aromates.py</file>
-    <menu-text>Redden aromatic bonds</menu-text>
+    <menu-text lang="en">Mark aromatic bonds</menu-text>
   </source>
 </plugin>

@@ -3,11 +3,15 @@
 <plugin>
 
   <meta>
-    <author>Beda Kosata</author>
+    <author email="beda@zirael.org">Beda Kosata</author>
+    <description>
+      Takes a compound name and tries to find it in the NIST Webbook. When successful, tries
+      to fetch the molfile and import it.
+    </description>
   </meta>
 
   <source>
     <file>fetch_from_webbook.py</file>
-    <menu-text>Fetch from Webbook</menu-text>
+    <menu-text lang="en">Fetch from Webbook</menu-text>
   </source>
 </plugin>
