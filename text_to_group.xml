@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin>
+
+  <meta>
+    <author email="beda@zirael.org">Beda Kosata</author>
+    <description>
+      Tries to convert the textatom to a group if possible.
+    </description>
+  </meta>
+
+  <source>
+    <file>text_to_group.py</file>
+    <menu-text lang="en">Textatom to group</menu-text>
+  </source>
+</plugin>

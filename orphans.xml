@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin>
+
+  <meta>
+    <author>Beda Kosata</author>
+  </meta>
+
+  <source>
+    <file>orphans.py</file>
+    <menu-text>find orphans</menu-text>
+  </source>
+</plugin>

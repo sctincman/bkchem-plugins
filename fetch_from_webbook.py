@@ -36,7 +36,7 @@ def get_mol_from_web_molfile( name):
 
 import Pmw
 
-dial = Pmw.PromptDialog( app.paper,
+dial = Pmw.PromptDialog( App.paper,
                          title=_('Name'),
                          label_text=_('Give the name of a molecule to fetch:'),
                          entryfield_labelpos = 'n',
@@ -53,15 +53,15 @@ if res == _('OK'):
   if molcas:
     mol, cas = molcas
     mol = StringIO.StringIO( mol)
-    molec = oasa_bridge.read_molfile( mol, app.paper)
+    molec = oasa_bridge.read_molfile( mol, App.paper)
     mol.close()
-    app.paper.stack.append( molec)
+    App.paper.stack.append( molec)
     molec.draw()
     if cas:
-      t = app.paper.new_text( 280, 300, text="CAS: "+cas.strip())
+      t = App.paper.new_text( 280, 300, text="CAS: "+cas.strip())
       t.draw()
-    app.paper.add_bindings()
-    app.paper.start_new_undo_record()
+    App.paper.add_bindings()
+    App.paper.start_new_undo_record()
   else:
-    app.update_status( "Sorry, molecule with name %s was not found" % name)
+    App.update_status( "Sorry, molecule with name %s was not found" % name)
 

@@ -1,8 +1,8 @@
 
 
-app.paper.unselect_all()
+App.paper.unselect_all()
 
-for mol in app.paper.molecules:
+for mol in App.paper.molecules:
   mol.mark_aromatic_bonds()
   for b in mol.bonds:
     if b.aromatic:
