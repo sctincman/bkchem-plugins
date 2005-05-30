@@ -4,14 +4,20 @@
 
   <meta>
     <author email="beda@zirael.org">Beda Kosata</author>
-    <description>
+    <description lang="en">
       Takes a compound name and tries to find it in the NIST Webbook. When successful, tries
       to fetch the molfile and import it.
     </description>
+    <description lang="cs">
+      Pokusí se najít zadané jméno molekuly v NIST Webbooku. Pokud uspěje, pokusí se stáhnout odpovídající
+      molfile a importovat ho.
+    </description>
+
   </meta>
 
   <source>
     <file>fetch_from_webbook.py</file>
     <menu-text lang="en">Fetch from Webbook</menu-text>
+    <menu-text lang="cs">Stáhni z Webbooku</menu-text>
   </source>
 </plugin>
