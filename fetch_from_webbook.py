@@ -1,19 +1,19 @@
 
-
-
 from urllib import urlopen
 import re
 import oasa_bridge
+from dialogs import progress_dialog
+
 
 molfile_link = re.compile( '(<a href=")(.*)(">2d Mol file</a>)')
 cas_re = re.compile('(<strong>CAS Registry Number:</strong>)(.*)(</li>)')
 
 def get_mol_from_web_molfile( name):
+  d = progress_dialog( 
   url = "http://webbook.nist.gov/cgi/cbook.cgi?Name=%s&Units=SI" % ("+".join( name.split()))
   try:
     stream = urlopen( url)
   except IOError:
-    print "not found"
     return None
   cas = ''
   for line in stream.readlines():
