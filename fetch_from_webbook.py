@@ -2,19 +2,24 @@
 from urllib import urlopen
 import re
 import oasa_bridge
-from dialogs import progress_dialog
+import dialogs
 
 
 molfile_link = re.compile( '(<a href=")(.*)(">2d Mol file</a>)')
 cas_re = re.compile('(<strong>CAS Registry Number:</strong>)(.*)(</li>)')
+#link_re = re.compile('(<a href=")(/cgi/cbook.cgi?ID=.*">)(.*)(</a>)')
+
 
 def get_mol_from_web_molfile( name):
-  d = progress_dialog( 
+  dialog = dialogs.progress_dialog( App, title=_("Fetching progress"))
   url = "http://webbook.nist.gov/cgi/cbook.cgi?Name=%s&Units=SI" % ("+".join( name.split()))
+  dialog.update( 0, top_text = "Connecting to WebBook...", bottom_text=url)
   try:
     stream = urlopen( url)
   except IOError:
+    dialog.close()
     return None
+  dialog.update( 0.4, top_text = "Searching for the compound...", bottom_text=url)
   cas = ''
   for line in stream.readlines():
     casm = cas_re.search( line)
@@ -22,12 +27,14 @@ def get_mol_from_web_molfile( name):
       cas = casm.group(2)
     m = molfile_link.search( line)
     if m:
-      print m.group( 2)
+      dialog.update( 0.8, top_text = "Reading the molfile...", bottom_text=m.group(2))      
       molfile = urlopen( "http://webbook.nist.gov" + m.group( 2))
       stream.close()
       ret = molfile.read()
       molfile.close()
+      dialog.close()
       return ret, cas
+  dialog.close()
   return None
 
 

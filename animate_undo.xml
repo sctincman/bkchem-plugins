@@ -5,6 +5,8 @@
   <meta>
     <author email="beda@zirael.org">Beda Kosata</author>
     <description>
+      Moves back to the latest undo step and replays all the steps while saving
+      each of them into a file 'filename'-XX.svg, where XX is a number.
     </description>
   </meta>
 
