@@ -4,11 +4,17 @@
 
   <meta>
     <author>Beda Kosata</author>
-    <description>Measures angle between two selected bonds.</description>
+    <description lang="en">
+      Measures angle between two selected bonds.
+    </description>
+    <description lang="de">
+      Misst den Winkel zwischen zwei ausgewählen Bindungen.
+    </description>
   </meta>
 
   <source>
     <file>angle_between_bonds.py</file>
-    <menu-text>Angle between bonds</menu-text>
+    <menu-text lang="en">Angle between bonds</menu-text>
+    <menu-text lang="de">Bindungswinkel</menu-text>
   </source>
 </plugin>

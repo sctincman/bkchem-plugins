@@ -1,9 +1,6 @@
 """Author: BKR
 Copied of......hmmm... Inspired by the "fetch from webbook" plugin :-)
-Known Bug: 	Having more layers than nist e.g.: trans-1,2-dibromo-cycloheaxane
 
-ToDO:		Dialog for the no maches found page from Nist. 
-			Letting you choose the stereoisomers found.
 Ideas: 		Getting all alternative names from webbook and or other sources and
 			creating a Dialog to choose the one desired
 	
@@ -180,7 +177,6 @@ if len(a)!= 0:
 		App.paper.swap_sides_of_selected( "horizontal")
 		inchi_form, mess = get_inchi_for_one(b)
 		App.paper.swap_sides_of_selected( "horizontal")
-#		print inchi_form
 		if len(mess) != 0:		#Check for Errors
 			err_mess = err_mess + mess
 		if inchi_form:

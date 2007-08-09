@@ -4,13 +4,17 @@
 
   <meta>
     <author email="beda@zirael.org">Beda Kosata</author>
-    <description>
-      Tries to convert the textatom to a group if possible.
+    <description lang="en">
+      Tries to convert the textatom to a group.
+    </description>
+    <description lang="de">
+      Falls möglich, konvertiert es ein Textatom zu einer Gruppe.
     </description>
   </meta>
 
   <source>
     <file>text_to_group.py</file>
     <menu-text lang="en">Textatom to group</menu-text>
+    <menu-text lang="de">Textatom zu Gruppe</menu-text>
   </source>
 </plugin>

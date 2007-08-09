@@ -12,12 +12,15 @@
       Pokusí se najít zadané jméno molekuly v NIST Webbooku. Pokud uspěje, pokusí se stáhnout odpovídající
       molfile a importovat ho.
     </description>
-
+    <description lang="de">
+      Durchsucht das NIST Webbook nach einem Molekülnamen und importiert, falls erfolgreich, die Mol Datei.
+    </description> 
   </meta>
 
   <source>
     <file>fetch_from_webbook.py</file>
     <menu-text lang="en">Fetch from Webbook</menu-text>
     <menu-text lang="cs">Stáhni z Webbooku</menu-text>
+    <menu-text lang="de">Suche Struktur (NIST Webbook)</menu-text>
   </source>
 </plugin>

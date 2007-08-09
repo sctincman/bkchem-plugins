@@ -8,11 +8,15 @@
       Finds all aromatic bonds in the current drawing (paper) and marks them
       by setting their color to red.
     </description>
+    <description lang="de">
+      Sucht aromatische Bindungen und färbt sie Rot.
+    </description>
   </meta>
 
   <source>
     <file>red_aromates.py</file>
     <menu-text lang="en">Mark aromatic bonds</menu-text>
     <menu-text lang="cs">Označ aromatické vazby</menu-text>
+    <menu-text lang="de">Markiere aromatische Bindungen</menu-text>
   </source>
 </plugin>
