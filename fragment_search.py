@@ -25,7 +25,7 @@ def process_directory( directory):
       if App._load_CDML_file( f, draw=False):
         found = False
         for mol in App.paper.molecules:
-          gen = mol.select_matching_substructures( fragment)
+          gen = mol.select_matching_substructures( fragment, implicit_freesites=True)
           try:
             gen.next()
           except StopIteration:
