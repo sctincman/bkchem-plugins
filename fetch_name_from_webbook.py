@@ -34,6 +34,7 @@ def get_inchi_for_one(u):
 #		sms = ["InChI generation failed,", "make sure the path to the InChI program is correct in 'Options/INChI program path'", "", str( e)]
 	except:
 		sms = ["Unknown error occured during INChI generation, sorry", "Please, try to make sure the path to the InChI program is correct in 'Options/INChI program path'"]
+		warning = []
 	sms=sms+warning
 	return inchi_mol, sms
 	
