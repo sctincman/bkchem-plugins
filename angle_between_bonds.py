@@ -7,7 +7,7 @@ import operator
 
 bs = [b for b in App.paper.selected if b.object_type == "bond"]
 if not len( bs) == 2:
-  Store.log( "You have to have 2 bonds selected", message_type="hint")
+  Store.log( _("You have to have 2 bonds selected"), message_type="hint")
 else:
   b1, b2 = bs
   center = Set( b1.vertices) & Set( b2.vertices)

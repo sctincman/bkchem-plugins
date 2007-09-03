@@ -13,13 +13,13 @@ cas_re = re.compile('(<strong>CAS Registry Number:</strong>)(.*)(</li>)')
 def get_mol_from_web_molfile( name):
   dialog = dialogs.progress_dialog( App, title=_("Fetching progress"))
   url = "http://webbook.nist.gov/cgi/cbook.cgi?Name=%s&Units=SI" % ("+".join( name.split()))
-  dialog.update( 0, top_text = "Connecting to WebBook...", bottom_text=url)
+  dialog.update( 0, top_text = _("Connecting to WebBook..."), bottom_text=url)
   try:
     stream = urlopen( url)
   except IOError:
     dialog.close()
     return None
-  dialog.update( 0.4, top_text = "Searching for the compound...", bottom_text=url)
+  dialog.update( 0.4, top_text = _("Searching for the compound..."), bottom_text=url)
   cas = ''
   for line in stream.readlines():
     casm = cas_re.search( line)
@@ -27,7 +27,7 @@ def get_mol_from_web_molfile( name):
       cas = casm.group(2)
     m = molfile_link.search( line)
     if m:
-      dialog.update( 0.8, top_text = "Reading the molfile...", bottom_text=m.group(2))      
+      dialog.update( 0.8, top_text = _("Reading the molfile..."), bottom_text=m.group(2))      
       molfile = urlopen( "http://webbook.nist.gov" + m.group( 2))
       stream.close()
       ret = molfile.read()
@@ -70,5 +70,5 @@ if res == _('OK'):
     App.paper.add_bindings()
     App.paper.start_new_undo_record()
   else:
-    App.update_status( "Sorry, molecule with name %s was not found" % name)
+    App.update_status( _("Sorry, molecule with name %s was not found") % name)
 

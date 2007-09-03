@@ -18,7 +18,7 @@ def process_directory( directory):
 
   for f in files_to_go: 
     #print f
-    dialog.update( files/len(files_to_go), top_text=os.path.split( f)[1], bottom_text="Found: %d" % matching)
+    dialog.update( files/len(files_to_go), top_text=os.path.split( f)[1], bottom_text=_("Found: %d % matching"))
     files += 1
     App.in_batch_mode = True
     if App.add_new_paper( name=f):
@@ -58,10 +58,10 @@ if not selected_mols and len( App.paper.molecules) == 1:
 
 
 if len( selected_mols) > 1:
-  Store.log( "Select only one molecule", message_type="error")
+  Store.log( _("Select only one molecule"), message_type="error")
 
 elif len( selected_mols) == 0:
-  Store.log( "Draw a molecule that you want to use as the fragment for search", message_type="error")
+  Store.log( _("Draw a molecule that you want to use as the fragment for search"), message_type="error")
 
 else:
   # we may proceed

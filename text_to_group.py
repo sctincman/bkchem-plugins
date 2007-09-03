@@ -21,7 +21,7 @@ for atom in textatoms:
     atom.delete()
     gr.draw()
 
-Store.log( "%d textatoms were converted to groups" % i)
+Store.log( _("%d textatoms were converted to groups") % i)
 
 
 App.paper.start_new_undo_record()
