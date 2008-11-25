@@ -10,9 +10,9 @@ textatoms = [a for a in selected if isinstance( a, textatom)]
 
 i = 0
 for atom in textatoms:
-  val = atom.get_occupied_valency()
+  val = atom.occupied_valency
   gr = atom.molecule.create_vertex( vertex_class=group)
-  text = atom.get_text()
+  text = atom.symbol
   print text
   if gr.set_name( text, occupied_valency=val):
     i += 1

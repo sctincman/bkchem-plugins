@@ -5,7 +5,7 @@
   <meta>
     <author email="beda@zirael.org">Beda Kosata</author>
     <description lang="en">
-      Takes a selected molecule and tries to find all files in the selected directory that contain
+      Takes a selected molecule and tries to find all files in selected directory that contain
       a molecule containing this fragment.
     </description>
     <description lang="de">

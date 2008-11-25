@@ -18,7 +18,7 @@ def process_directory( directory):
 
   for f in files_to_go: 
     #print f
-    dialog.update( files/len(files_to_go), top_text=os.path.split( f)[1], bottom_text=_("Found: %d % matching"))
+    dialog.update( files/len(files_to_go), top_text=os.path.split( f)[1], bottom_text=_("Found: %d matching") % matching)
     files += 1
     App.in_batch_mode = True
     if App.add_new_paper( name=f):
