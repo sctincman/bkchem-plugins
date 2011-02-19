@@ -60,7 +60,7 @@ if res == _('OK'):
   if molcas:
     mol, cas = molcas
     mol = StringIO.StringIO( mol)
-    molec = oasa_bridge.read_molfile( mol, App.paper)
+    molec = oasa_bridge.read_molfile(mol, App.paper)[0]
     mol.close()
     App.paper.stack.append( molec)
     molec.draw()
