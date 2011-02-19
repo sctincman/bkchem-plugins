@@ -29,7 +29,7 @@ def get_inchi_for_one(u):
 	if not interactors.check_validity( u):
 		return '',["validity Error",]	
 	try:
-		inchi_mol,warning=( oasa_bridge.mol_to_inchi( u, program))
+		inchi_mol,key,warning=( oasa_bridge.mol_to_inchi( u, program))
 #	except oasa.oasa_exceptions.oasa_inchi_error, e:
 #		sms = ["InChI generation failed,", "make sure the path to the InChI program is correct in 'Options/INChI program path'", "", str( e)]
 	except:
