@@ -23,9 +23,9 @@ else:
         v1 = (b1.atom1.x - b1.atom2.x, b1.atom1.y - b1.atom2.y, b1.atom1.z - b1.atom2.z)
         v2 = (b2.atom1.x - b2.atom2.x, b2.atom1.y - b2.atom2.y, b2.atom1.z - b2.atom2.z)
 
-    dot = reduce(operator.add, map(operator.mul, v1, v2))
-    dv1 = math.sqrt(reduce(operator.add, map(lambda x: x**2, v1)))
-    dv2 = math.sqrt(reduce(operator.add, map(lambda x: x**2, v2)))
+    dot = sum(map(operator.mul, v1, v2))
+    dv1 = math.sqrt(sum(x**2 for x in v1))
+    dv2 = math.sqrt(sum(x**2 for x in v2))
 
     cos_a = dot / dv1 / dv2
 
