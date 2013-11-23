@@ -1,10 +1,16 @@
 from __future__ import division
-from singleton_store import Store
+
 import os
-import logger
 import time
-import tkFileDialog
+try:
+    import tkinter.filedialog as tkFileDialog
+except ImportError:
+    import tkFileDialog
+
+import logger
 import dialogs
+
+from singleton_store import Store
 
 
 
