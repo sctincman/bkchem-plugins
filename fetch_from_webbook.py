@@ -54,7 +54,10 @@ if res == _('OK'):
 
     # fetch the molfile
 
-    import StringIO
+    try:
+        from io import StringIO
+    except ImportError:
+        import StringIO
 
     molcas = get_mol_from_web_molfile(name)
     if molcas:
