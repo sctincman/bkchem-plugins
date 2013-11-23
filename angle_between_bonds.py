@@ -1,3 +1,4 @@
+from __future__ import print_function
 
 import math
 from singleton_store import Store
@@ -17,7 +18,7 @@ else:
         a22 = b2.atom1 == a11 and b2.atom2 or b2.atom1
         v1 = (a12.x - a11.x, a12.y - a11.y, a12.z - a11.z)
         v2 = (a22.x - a11.x, a22.y - a11.y, a22.z - a11.z)
-        print v1, v2
+        print(v1, v2)
     else:
         v1 = (b1.atom1.x - b1.atom2.x, b1.atom1.y - b1.atom2.y, b1.atom1.z - b1.atom2.z)
         v2 = (b2.atom1.x - b2.atom2.x, b2.atom1.y - b2.atom2.y, b2.atom1.z - b2.atom2.z)
@@ -29,7 +30,7 @@ else:
     cos_a = dot / dv1 / dv2
 
     ret = math.acos(cos_a)
-    print cos_a
+    print(cos_a)
 
     res = "%.2f" % (180*ret/math.pi)
 
