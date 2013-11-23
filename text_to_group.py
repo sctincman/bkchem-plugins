@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 from textatom import textatom
 from group import group
 from singleton_store import Store
@@ -13,7 +15,7 @@ for atom in textatoms:
     val = atom.occupied_valency
     gr = atom.molecule.create_vertex(vertex_class=group)
     text = atom.symbol
-    print text
+    print(text)
     if gr.set_name(text, occupied_valency=val):
         i += 1
         atom.copy_settings(gr)
