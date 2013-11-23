@@ -1,12 +1,12 @@
 from __future__ import print_function
 
-from textatom import textatom
 from group import group
+from textatom import textatom
 from singleton_store import Store
-import operator
 
 # if nothing is selected the use all
-selected = App.paper.selected or reduce(operator.add, [m.vertices for m in App.paper.molecules])
+selected = App.paper.selected or (j for i in [m.vertices for m in App.paper.molecules]
+                                        for j in i)
 textatoms = [a for a in selected if isinstance(a, textatom)]
 
 
