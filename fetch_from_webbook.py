@@ -1,8 +1,12 @@
-
-from urllib import urlopen
 import re
-import oasa_bridge
+
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib import urlopen
+
 import dialogs
+import oasa_bridge
 
 
 molfile_link = re.compile('(<a href=")(.*)(">2d Mol file</a>)')
