@@ -8,6 +8,7 @@
 
   <source>
     <file>mass_scissors.py</file>
-    <menu-text>Mass scissors</menu-text>
+    <menu-text lang="en">Mass scissors</menu-text>
+    <menu-text lang="lv">Masas šķēres</menu-text>
   </source>
 </plugin>
