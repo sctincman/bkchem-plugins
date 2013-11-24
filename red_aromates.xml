@@ -11,6 +11,9 @@
     <description lang="de">
       Sucht aromatische Bindungen und färbt sie Rot.
     </description>
+    <description lang="lv">
+      Atrod visas aromātiskās saites pašreizējā lapā un iekrāso tās sarkanas.
+    </description>
   </meta>
 
   <source>
@@ -18,5 +21,6 @@
     <menu-text lang="en">Mark aromatic bonds</menu-text>
     <menu-text lang="cs">Označ aromatické vazby</menu-text>
     <menu-text lang="de">Markiere aromatische Bindungen</menu-text>
+    <menu-text lang="lv">Iezīmē aromātiskās saites</menu-text>
   </source>
 </plugin>
