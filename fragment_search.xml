@@ -10,13 +10,18 @@
     </description>
     <description lang="de">
       Sucht die Dateien in einem Order, die das ausgewählte Molekül als Fragment enthalten.
-    </description>   </meta>
+    </description>
+    <description lang="lv">
+      Meklē visus failus izvēlētajā mapē, kuros ir molekula, kas satur izvēlēto fragmentu.
+    </description>
+  </meta>
 
   <source>
     <file>fragment_search.py</file>
     <menu-text lang="en">Find files containing fragment</menu-text>
     <menu-text lang="cs">Najdi soubory obsahující fragment</menu-text>
     <menu-text lang="de">Durchsuche Dateien nach Fragmenten</menu-text>
+    <menu-text lang="lv">Atrast failus, kas satur fragmentu</menu-text>
     <menu>File</menu>
   </source>
 </plugin>
