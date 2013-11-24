@@ -26,15 +26,17 @@ def get_mol_from_web_molfile(name):
     dialog.update(0.4, top_text = _("Searching for the compound..."), bottom_text=url)
     cas = ''
     for line in stream.readlines():
+        line = line.decode('utf-8')
         casm = cas_re.search(line)
         if casm:
             cas = casm.group(2)
         m = molfile_link.search(line)
         if m:
-            dialog.update(0.8, top_text = _("Reading the molfile..."), bottom_text=m.group(2))
-            molfile = urlopen("http://webbook.nist.gov" + m.group(2))
+            s = m.group(2)
+            dialog.update(0.8, top_text = _("Reading the molfile..."), bottom_text=s)
+            molfile = urlopen("http://webbook.nist.gov" + s)
             stream.close()
-            ret = molfile.read()
+            ret = molfile.read().decode('utf-8')
             molfile.close()
             dialog.close()
             return ret, cas
@@ -72,7 +74,7 @@ if res == _('OK'):
         App.paper.stack.append(molec)
         molec.draw()
         if cas:
-            t = App.paper.new_text(280, 300, text="CAS: "+cas.strip())
+            t = App.paper.new_text(280, 300, text="CAS: " + cas.strip())
             t.draw()
         App.paper.add_bindings()
         App.paper.start_new_undo_record()
