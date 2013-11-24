@@ -5,12 +5,20 @@ Ideas:      Getting all alternative names from webbook and or other sources and
             creating a Dialog to choose the one desired
 """
 
-from urllib import urlopen
 import re
-import oasa_bridge
+
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib import urlopen
+
 import dialogs
-from singleton_store import Store
+import oasa_bridge
+
 from main import interactors
+from singleton_store import Store
+
+
 
 # search strings for the name and the cas registry number
 name_re = re.compile('(<h1><a id="Top" name="Top">)(.*)(</a></h1>)')
