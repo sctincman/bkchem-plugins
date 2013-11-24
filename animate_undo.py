@@ -1,5 +1,6 @@
-
 import os.path
+
+
 
 crop_svg = App.paper.get_paper_property('crop_svg')
 App.paper.set_paper_properties(crop_svg=0)
@@ -16,7 +17,6 @@ for i in range(n):
 for i in range(n):
     App.save_CDML(name="%s-%02d%s" % (name, i, ext))
     App.paper.redo()
-
 
 App.paper.set_paper_properties(crop_svg=crop_svg)
 

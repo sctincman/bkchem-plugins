@@ -9,6 +9,7 @@ import dialogs
 import oasa_bridge
 
 
+
 molfile_link = re.compile('(<a href=")(.*)(">2d Mol file</a>)')
 cas_re = re.compile('(<strong>CAS Registry Number:</strong>)(.*)(</li>)')
 #link_re = re.compile('(<a href=")(/cgi/cbook.cgi?ID=.*">)(.*)(</a>)')
@@ -42,7 +43,6 @@ def get_mol_from_web_molfile(name):
             return ret, cas
     dialog.close()
     return None
-
 
 
 ## ask for the name to fetch
