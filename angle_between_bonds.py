@@ -1,9 +1,10 @@
 from __future__ import print_function
 
 import math
-from singleton_store import Store
-from sets import Set
 import operator
+
+from singleton_store import Store
+
 
 
 bs = [b for b in App.paper.selected if b.object_type == "bond"]
@@ -11,7 +12,7 @@ if not len(bs) == 2:
     Store.log(_("You have to have 2 bonds selected"), message_type="hint")
 else:
     b1, b2 = bs
-    center = Set(b1.vertices) & Set(b2.vertices)
+    center = set(b1.vertices) & set(b2.vertices)
     if center:
         a11 = center.pop()
         a12 = b1.atom1 == a11 and b1.atom2 or b1.atom1
