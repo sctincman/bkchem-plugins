@@ -106,6 +106,7 @@ def download_nist(url):
     dialog.update(0.5, top_text = "Reading the webbook...", bottom_text=url)
     stream_lines = stream.readlines()
     for line in stream_lines:
+        line = line.decode('utf-8')
         mol_namem = name_re.search(line)
         if line == "<h2>No matches found</h2>\n":   #When stereoisomers are found
             dialog.close()
