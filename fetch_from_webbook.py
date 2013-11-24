@@ -57,12 +57,12 @@ if res == _('OK'):
     try:
         from io import StringIO
     except ImportError:
-        import StringIO
+        from StringIO import StringIO
 
     molcas = get_mol_from_web_molfile(name)
     if molcas:
         mol, cas = molcas
-        mol = StringIO.StringIO(mol)
+        mol = StringIO(mol)
         molec = oasa_bridge.read_molfile(mol, App.paper)[0]
         mol.close()
         App.paper.stack.append(molec)
